@@ -4,3 +4,24 @@ body {
   font-family: 'Poppins', sans-serif;
   color: rgb(219, 226, 232);
 }
+
+
+
+
+
+.icons :hover{
+    color: #4b5078;
+    transition: ease-in;
+    background-color: rgb(211, 176, 133);
+}
+
+.temp Button {
+  all: unset;
+  padding: 5px 10px;
+  
+}
+
+.temp Button:hover{
+    background-color:#7D938A;
+     border-radius: 5px;
+  }
