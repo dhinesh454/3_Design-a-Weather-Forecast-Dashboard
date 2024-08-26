@@ -44,7 +44,8 @@ const getWeather = useCallback(async () => {
       progress: undefined,
     });
   } catch (error) {
-    toast.error(`Try again !!..Enter the correct city Name`, {
+    console.log(error,error.message)
+    toast.error(`No results found Try again !!..Enter the correct city Name`, {
       position: "top-right",
       autoClose: 3000,
       hideProgressBar: false,
@@ -71,7 +72,7 @@ const getWeather = useCallback(async () => {
 
   return (
     <div
-      className="mx-auto mt-2 p-5 shadow-lg text-light" style={{maxWidth: '1024px',background:`${backgroundColor()}`// Custom shadow-gray-400
+      className="mx-auto p-5 shadow-lg text-light" style={{maxWidth: '1024px',background:`${backgroundColor()}`// Custom shadow-gray-400
       }}
     >
      <ToastContainer/>

@@ -77,16 +77,16 @@ const TempandDetails = (props) => {
             <p>{props.weather.main}</p>
         </div>
 
-        <div className="d-flex align-items-center justify-content-between py-3 mx-2 ">
+        <div className="d-flex align-items-center justify-content-between py-3 mx-1 ">
             <Image  className='w-20' src={props.weather.icon} alt="weather icon"/>
             <h1  className="fw-bold">{`${props.weather.temp.toFixed()}° ${props.units === 'metric' ? 'C' : 'F'}`}</h1>
         <div className="d-flex flex-column gap-3 align-items-start">
 
         {
             verticalDetails.map((data)=>(
-            <div key={data.id} className="d-flex text-light fs-6 align-items-center justify-content-center fw-bold fst-italic">
+            <div key={data.id} className="d-flex text-light fs-6 align-items-center justify-content-between fw-bold fst-italic mx-1 ">
                 <data.Icon size={18} className="mr-1 fst-italic"/>
-                {data.title}:<span className="ml-1 "> {data.value}</span>
+                {data.title}:<span className="ml-1 ">{data.value}</span>
             </div>
             ))
         }
@@ -95,9 +95,9 @@ const TempandDetails = (props) => {
         </div>
 
 
-        <div className="d-flex flex-row align-items-center justify-content-center fs-6 gap-5 py-3">
+        <div className="d-flex align-content-center justify-content-between mt-5">
             {horizontalDetails.map((data)=>(
-                    <div key={data.id} className="d-flex flex-row ">
+                    <div key={data.id} className="d-flex flex-row flex-wrap">
                     <data.Icon size={19} className="mr-1 fst-italic"/>
                    <p className='fw-bold' style={{fontSize:'medium'}}>{data.title}:<span className="ml-1 " style={{fontSize:'small'}}> {data.value}</span></p>
                   </div>
